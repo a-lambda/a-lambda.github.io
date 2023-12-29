@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "a-lambda.github.io"
+  title: "A lambda story"
   navbar:
     left:
       - href: index.qmd
