@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "The chance",
     "section": "",
-    "text": "Email\n  \n  \n    \n     Github\n  \n\n  \n  \nIs your world choosing the same numbers as mine ?\n\nCoderoll &lt;- sample.int(n = 6, size = 42, replace = TRUE)\ntable(roll)\n\nroll\n 1  2  3  4  5  6 \n 7 11  7  7  3  7 \n\n\nHow many trials before getting an identical world ?"
+    "text": "Email\n  \n  \n    \n     Github\n  \n\n  \n  \nIs your world choosing the same numbers as mine ?\n\nCoderoll &lt;- sample.int(n = 6, size = 42, replace = TRUE)\ntable(roll)\n\nroll\n 1  2  3  4  5  6 \n 5  5 10  3 10  9 \n\n\nHow many trials before getting an identical world ?"
   },
   {
     "objectID": "about.html",

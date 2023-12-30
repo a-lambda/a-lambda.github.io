@@ -15,6 +15,7 @@ format:
     theme: 
       light: 
         - minty
+        - css/fira-code.css
         - light.css
       dark: 
         - slate
