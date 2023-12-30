@@ -5,5 +5,7 @@ title: "About"
 About this site
 
 ```{r}
-1 + 1
+#| label: roll-a-dice
+roll <- sample.int(n = 6, size = 42, replace = TRUE)
+table(roll)
 ```
