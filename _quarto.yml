@@ -24,7 +24,7 @@ format:
     code-fold: true
     mainfont: verdana
     fontsize: 1.25rem
-    monofont: fira code
+    monofont: Fira Code
     css: styles.css
     toc: true
 
