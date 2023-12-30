@@ -2,7 +2,7 @@
 title: "The chance"
 image: dice.png
 about:
-  template: marquee
+  template: trestles
   image-shape: rounded
   image-width: 20em
   links: 
@@ -11,10 +11,11 @@ about:
       href: mailto:alain.corvisier@proton.me
     - text: Github
       icon: github
-      href: https://github.com/a-lambda
+      href: https://a-lambda.github.io
   id: ppc
-  
 ---
+
+:::{#ppc}
 
 Is your world choosing the same numbers as mine ?
 
@@ -24,16 +25,12 @@ Is your world choosing the same numbers as mine ?
 library(ggplot2)
 ```
 
-
 ```{r}
-roll <- sample.int(n = 6, size = 15, replace = TRUE)
+roll <- sample.int(n = 6, size = 42, replace = TRUE)
 table(roll)
 ```
 
-:::{#ppc}
-How many trials before getting an identical world
-
+How many trials before getting an identical world ?
 
 :::
-
 

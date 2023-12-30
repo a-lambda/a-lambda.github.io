@@ -142,43 +142,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>Is your world choosing the same numbers as mine ?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>roll <span class="ot">&lt;-</span> <span class="fu">sample.int</span>(<span class="at">n =</span> <span class="dv">6</span>, <span class="at">size =</span> <span class="dv">15</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(roll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>roll
-2 3 4 5 6 
-1 3 1 6 4 </code></pre>
-</div>
-</div>
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
+<div class="quarto-about-trestles">
+  <div class="about-entity">
     <img src="dice.png" class="about-image
   rounded " style="width: 20em;">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">The chance</h1>
 </div>
 <div class="quarto-title-meta">
   </div>
-</header> <div id="ppc">
-<p>How many trials before getting an identical world</p>
-</div> 
-    <div class="about-footer"><div class="about-links">
+</header>
+    <div class="about-links">
   <a href="mailto:alain.corvisier@proton.me" class="about-link" rel="" target="">
     <i class="bi bi-envelope"></i>
      <span class="about-link-text">Email</span>
   </a>
-  <a href="https://github.com/a-lambda" class="about-link" rel="" target="">
+  <a href="https://a-lambda.github.io" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">Github</span>
   </a>
 </div>
-</div>
   </div>
+  <div class="about-contents"><div id="ppc">
+<p>Is your world choosing the same numbers as mine ?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>roll <span class="ot">&lt;-</span> <span class="fu">sample.int</span>(<span class="at">n =</span> <span class="dv">6</span>, <span class="at">size =</span> <span class="dv">42</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(roll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>roll
+1 2 3 4 5 6 
+5 8 7 6 8 8 </code></pre>
+</div>
+</div>
+<p>How many trials before getting an identical world ?</p>
+</div></div>
 </div>
 
 
