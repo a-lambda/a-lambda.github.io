@@ -1,11 +1,39 @@
 ---
-title: "a-lambda.github.io"
+title: "The chance"
+image: dice.png
+about:
+  template: marquee
+  image-shape: rounded
+  image-width: 20em
+  links: 
+    - text: Email
+      icon: envelope
+      href: mailto:alain.corvisier@proton.me
+    - text: Github
+      icon: github
+      href: https://github.com/a-lambda
+  id: ppc
+  
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Is your world choosing the same numbers as mine ?
 
 ```{r}
-1 + 1
+#| label: load-ggplot
+#| echo: false
+library(ggplot2)
 ```
+
+
+```{r}
+roll <- sample.int(n = 6, size = 15, replace = TRUE)
+table(roll)
+```
+
+:::{#ppc}
+How many trials before getting an identical world
+
+
+:::
+
+
