@@ -26,6 +26,7 @@ library(ggplot2)
 ```
 
 ```{r}
+#| label: roll-a-dice
 roll <- sample.int(n = 6, size = 42, replace = TRUE)
 table(roll)
 ```

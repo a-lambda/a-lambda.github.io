@@ -15,6 +15,8 @@ format:
     theme: 
       light: minty
       dark: slate
+    code-link: true
+    code-fold: true
     mainfont: verdana
     fontsize: 1.25rem
     monofont: fira code retina
