@@ -1,6 +1,6 @@
 ---
 title: "The chance"
-image: dice.png
+image: H1_hasard_maths_Alain.jpg
 about:
   template: trestles
   image-shape: rounded
@@ -23,12 +23,19 @@ Is your world choosing the same numbers as mine ?
 #| label: load-ggplot
 #| echo: false
 library(ggplot2)
+library(tibble)
 ```
 
 ```{r}
 #| label: roll-a-dice
-roll <- sample.int(n = 6, size = 42, replace = TRUE)
+#| fig-width: 8
+#| fig-height: 8
+
+roll <- 
+  sample.int(n = 6, size = 42, replace = TRUE)
+
 table(roll)
+
 ```
 
 How many trials before getting an identical world ?

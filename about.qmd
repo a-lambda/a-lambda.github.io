@@ -2,10 +2,8 @@
 title: "About"
 ---
 
-About this site
+I'm interested in spatial statistics
 
-```{r}
-#| label: roll-a-dice
-roll <- sample.int(n = 6, size = 42, replace = TRUE)
-table(roll)
-```
+- [r-spatial-website](https://www.r-spatial.org)
+- [sf package](https://r-spatial.github.io/sf)
+
