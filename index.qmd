@@ -40,5 +40,7 @@ table(roll)
 
 How many trials before getting an identical world ?
 
+And which are we consider as the reference ?
+
 :::
 
