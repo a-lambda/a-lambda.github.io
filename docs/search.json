@@ -4,13 +4,13 @@
     "href": "index.html",
     "title": "The chance",
     "section": "",
-    "text": "Email\n  \n  \n    \n     Github\n  \n\n  \n  \nIs your world choosing the same numbers as mine ?\n\nCoderoll &lt;- \n  sample.int(n = 6, size = 42, replace = TRUE)\n\ntable(roll)\n\nroll\n1 2 3 4 5 6 \n8 8 6 8 5 7 \n\n\nHow many trials before getting an identical world ?\nAnd which are we consider as the reference ?"
+    "text": "Email\n  \n  \n    \n     Github\n  \n\n  \n  \nIs your world choosing the same numbers as mine ?\n\nCoderoll &lt;- \n  sample.int(n = 6, size = 42, replace = TRUE)\n\ntable(roll)\n\nroll\n1 2 3 4 5 6 \n8 6 4 7 8 9 \n\n\nHow many trials before getting an identical world ?\nAnd which are we consider as the reference ?"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I’m interested in spatial statistics\n\nr-spatial-website\nsf package\n\nand in ggplot2 extensions"
+    "text": "I’m interested in spatial statistics\n\nr-spatial-website\nsf package\n\nand in ggplot2 extensions\n\n\n\n\n\n\nNote\n\n\n\n\n\nHey that’s was just a note joke :)"
   }
 ]
