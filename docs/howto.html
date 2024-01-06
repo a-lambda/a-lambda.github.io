@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>A lambda story - The chance</title>
+
+
+<title>A lambda story - How-To Github</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,41 +20,8 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
+
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -63,13 +33,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -88,12 +60,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="styles.css">
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">A lambda story</span>
@@ -105,8 +83,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -114,64 +92,158 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./quarto_website.html" rel="" target="">
- <span class="menu-text">Quarto Website</span></a>
+    <a class="nav-link active" href="./howto.html" rel="" target="" aria-current="page">
+ <span class="menu-text">How-To Github</span></a>
   </li>  
 </ul>
-<div class="quarto-navbar-tools ms-auto">
+            <div class="quarto-navbar-tools ms-auto">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#publication-dun-document-quarto-sur-github" id="toc-publication-dun-document-quarto-sur-github" class="nav-link active" data-scroll-target="#publication-dun-document-quarto-sur-github">Publication d’un document Quarto sur Github</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#création-dun-site-web-quarto" id="toc-création-dun-site-web-quarto" class="nav-link" data-scroll-target="#création-dun-site-web-quarto">Création d’un site Web Quarto</a></li>
+  <li><a href="#création-du-dépôt-github" id="toc-création-du-dépôt-github" class="nav-link" data-scroll-target="#création-du-dépôt-github">Création du dépôt Github</a></li>
+  <li><a href="#déploiement-du-site-web-sur-github" id="toc-déploiement-du-site-web-sur-github" class="nav-link" data-scroll-target="#déploiement-du-site-web-sur-github">Déploiement du site web sur Github</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><div class="quarto-about-trestles column-page">
-  <div class="about-entity">
-    <img src="H1_hasard_maths_Alain.jpg" class="about-image
-  rounded " style="width: 20em;">
-<header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">The chance</h1>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How-To Github</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
+  
+
 </header>
-    <div class="about-links">
-  <a href="mailto:alain.corvisier@proton.me" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-  <a href="https://a-lambda.github.io" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
+
+<section id="publication-dun-document-quarto-sur-github" class="level2">
+<h2 class="anchored" data-anchor-id="publication-dun-document-quarto-sur-github">Publication d’un document Quarto sur Github</h2>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Ce document est basée sur <a href="https://youtu.be/uimdXPZc40I">cette vidéo Youtube en anglais</a></p>
+<p>Les pages Github (<a href="https://pages.github.com/" class="uri">https://pages.github.com/</a>) sont une fonctionnalité offerte par Github qui permet d’héberger votre site Web personnel ainsi que vos projets.</p>
+<p>L’hébergement s’effectue dans votre dépôt (ou repository), ce qui vous permet de :</p>
+<ul>
+<li>conserver un dépôt git pour votre site Web</li>
+<li>pousser (push) des changements dans votre site Web vers Github</li>
+<li>visualiser presque instantanément les changements de votre site dans Github</li>
+</ul>
+<p>Si votre nom d’utilisateur Github est <code>username</code> et que votre site Web est contenu dans le dépôt <code>demosite</code>alors le rendu de votre site Web sera disponible à l’adresse <code>https://username.github.io/demosite/</code>.</p>
+<p>Si vous créer un site Web personnel, il est préférable de l’héberger à l’adresse <code>https://username.github.io</code>.</p>
+<hr>
+</section>
+<section id="création-dun-site-web-quarto" class="level3">
+<h3 class="anchored" data-anchor-id="création-dun-site-web-quarto">Création d’un site Web Quarto</h3>
+<ul>
+<li>Dans R Studio,</li>
+</ul>
+<ol type="1">
+<li><p>Depuis le menu File, click -&gt; New Project</p></li>
+<li><p>Sélectionner New Directory -&gt; Quarto website</p></li>
+<li><p>Choisir un nom de répertoire</p></li>
+</ol>
+<ul>
+<li><p>s’il s’agit du site web personnel hébergé sur Github il faudra choisir comme nom de répertoire <code>username.github.io</code>, <code>username</code> représentant votre nom d’utilisateur Github. Le résultat sera visible à l’adresse <code>https://username.github.io</code></p></li>
+<li><p>s’il s’agit d’un site relatif à un projet hébergé sur Github, il faudra choisir comme nom de répertoire <code>name</code> qui représentera le nom de votre projet. Le résultat sera visible à l’adresse <code>https://username.github.io/name/</code>.</p></li>
+</ul>
+<p>Un exemple est donné ici <a href="#fig-config_projet_quarto">Figure&nbsp;1</a></p>
+<div id="fig-config_projet_quarto" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/0_create-quarto-website.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Configuration du projet de site Web Quarto</figcaption>
+</figure>
 </div>
-  </div>
-  <div class="about-contents"><div id="ppc">
-<p>Is your world choosing the same numbers as mine ?</p>
-<div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">roll</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample.int</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">6</span>, size <span class="op">=</span> <span class="fl">42</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">roll</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>roll
- 1  2  3  4  5  6 
- 6  9  7 10  3  7 </code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
 </div>
 </div>
-<p>How many trials before getting an identical world ?</p>
-<p>And which are we consider as the reference ?</p>
-</div></div>
+<div class="callout-body-container callout-body">
+<p>Ne pas oublier de cocher l’option <code>Create a git repository</code> pour la gestion des versions de votre site. Git aura été préalablement installé depuis <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
 </div>
+</div>
+</section>
+<section id="création-du-dépôt-github" class="level3">
+<h3 class="anchored" data-anchor-id="création-du-dépôt-github">Création du dépôt Github</h3>
+<ul>
+<li>se loguer dans Github</li>
+<li>Depuis la page principale, créer un dépôt Github.
+<ul>
+<li><p>Pour votre site web personnel, le dépôt devra s’appeler <code>username.github.io</code>. Il faudra bien sûr remplacer <code>username</code>par votre nom d’utilisateur Github et sélectionner l’option <strong>Public</strong> pour que le site soit visible par tous (cf. <a href="#fig-website">Figure&nbsp;2</a>)</p>
+<p>Pour héberger un projet, le dépôt, si vous décider de l’appeler <code>projet</code>, apparaîtra à l’adresse <code>https://username.github.io/projet</code> (cf. <a href="#fig-site_projet">Figure&nbsp;3</a>).</p></li>
+</ul></li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-website" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/1_create-personal-website.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Configuration pour site web personnel</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-site_projet" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/2_create-project-site.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Configuration pour un site projet</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="déploiement-du-site-web-sur-github" class="level3">
+<h3 class="anchored" data-anchor-id="déploiement-du-site-web-sur-github">Déploiement du site web sur Github</h3>
+<ul>
+<li><p>sélectionner l’onglet <code>settings</code> relatif au projet et cliquer sur <code>Pages</code></p></li>
+<li><p>Dans la section <strong>Build and deployment</strong> sélectionner la branche <code>main</code> et le répertoire <code>/docs</code> dans lequel figurent l’ensemble des fichiers constituant le site web (cf <a href="#fig-configuration_pages">Figure&nbsp;4</a>)</p></li>
+</ul>
+<div id="fig-configuration_pages" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/3_repository-settings-pages.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: Configuration de déploiement du site</figcaption>
+</figure>
+</div>
+<p>La ligne “Your site live at <code>https://a-lambda.github.io</code>” permet de vérifier que le rendu du site s’est correctement effectué. Un clic sur le bouton <code>Visit site</code> permet d’apprécier le résultat.</p>
 
 
+</section>
+</section>
 
-
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -306,6 +378,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

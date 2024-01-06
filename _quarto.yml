@@ -9,6 +9,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: quarto_website.qmd
+        text: Quarto Website
 
 format:
   html:
