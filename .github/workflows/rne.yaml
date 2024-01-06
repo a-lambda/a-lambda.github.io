@@ -1,0 +1,9 @@
+name: rne
+run-name: Setting up the rne database
+on: [push]
+jobs:
+  test-output:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Test Output
+      run: echo "Here is a test"
