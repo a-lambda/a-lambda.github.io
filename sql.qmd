@@ -27,4 +27,10 @@ conn <- RPostgres::dbConnect(
   password = DB_PASSWORD)
 
 RPostgres::dbListTables(conn)
+
+result <- RPostgres::dbGetQuery(
+  conn, 
+  "SELECT elu_genre, elu_nom, elu_prenom, elu_lieu_naissance FROM elu WHERE elu_date_naissance = '1967-04-19' ORDER BY elu_genre, elu_nom, elu_prenom;")
+
+print(result)
 ```
