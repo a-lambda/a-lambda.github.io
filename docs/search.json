@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "The chance",
     "section": "",
-    "text": "Email\n  \n  \n    \n     Github\n  \n\n  \n  \nIs your world choosing the same numbers as mine ?\n\nCoderoll &lt;- \n  sample.int(n = 6, size = 42, replace = TRUE)\n\ntable(roll)\n\nroll\n1 2 3 4 5 6 \n8 7 8 7 3 9 \n\n\nHow many trials before getting an identical world ?\nAnd which are we consider as the reference ?"
+    "text": "Email\n  \n  \n    \n     Github\n  \n\n  \n  \nIs your world choosing the same numbers as mine ?\n\nCoderoll &lt;- \n  sample.int(n = 6, size = 42, replace = TRUE)\n\ntable(roll)\n\nroll\n 1  2  3  4  5  6 \n 5  5  5  8 13  6 \n\n\nHow many trials before getting an identical world ?\nAnd which are we consider as the reference ?"
   },
   {
     "objectID": "about.html",
@@ -53,6 +53,6 @@
     "href": "animate_plot.html",
     "title": "Animate plots",
     "section": "",
-    "text": "Codeggplot(mpg) +\n  geom_bar(aes(x = factor(cyl))) +\n  labs(title = 'Number of cars in {closest_state} by number of cylinders') +\n  transition_states(states = year) +\n  enter_grow() +\n exit_fade()"
+    "text": "1. Exemple d’animation\n\nCodeggplot(mpg) +\n  geom_bar(aes(x = factor(cyl))) +\n  labs(title = 'Number of cars in {closest_state} by number of cylinders') +\n  transition_states(states = year) +\n  enter_grow() +\n exit_fade()"
   }
 ]

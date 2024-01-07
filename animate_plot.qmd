@@ -10,7 +10,10 @@ library(gganimate)
 # faire une animation avec les données gapminder puis autre chose
 ```
 
+### 1. Exemple d'animation
+
 ```{r}
+#| label: geombar-animate
 ggplot(mpg) +
   geom_bar(aes(x = factor(cyl))) +
   labs(title = 'Number of cars in {closest_state} by number of cylinders') +
