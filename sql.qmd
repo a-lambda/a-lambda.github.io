@@ -1,0 +1,30 @@
+---
+title: "SQL"
+---
+
+### 1. PostgreSQL interesting commands
+
+- REASSIGN OWNED BY <old_role> to <new_role>;
+
+- REVOKE ALL PRIVILEGES ON DATABASE <database> FROM <role>;
+
+```{r}
+#| label: load-ggplot
+#| echo: false
+library(RPostgres)
+library(tibble)
+
+DB_HOSTNAME <- Sys.getenv("DB_HOSTNAME")
+DB_USER <- Sys.getenv("DB_USER")
+DB_PASSWORD <- Sys.getenv("DB_PASSWORD")
+
+conn <- RPostgres::dbConnect(
+  drv = RPostgres::Postgres(), 
+  dbname = "cpam",
+  host = DB_HOSTNAME,
+  port = "5432",
+  user = DB_USER,
+  password = DB_PASSWORD)
+
+RPostgres::dbListTables(conn)
+```

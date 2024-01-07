@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>A lambda story - Création d’un site Web Quarto sur Github</title>
+<title>A lambda story - SQL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +18,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -40,8 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -60,18 +55,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="styles.css">
+}</script><link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">A lambda story</span>
@@ -83,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
@@ -92,44 +81,32 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./quarto_website.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./quarto_website.html" rel="" target="">
  <span class="menu-text">Quarto Website</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./sql.html" rel="" target="">
+    <a class="nav-link active" href="./sql.html" rel="" target="" aria-current="page">
  <span class="menu-text">SQL</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+<div class="quarto-navbar-tools ms-auto">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
-  <li><a href="#création-dun-site-web-quarto" id="toc-création-dun-site-web-quarto" class="nav-link" data-scroll-target="#création-dun-site-web-quarto">2. Création d’un site Web Quarto</a></li>
-  <li><a href="#modification-du-répertoire-output-du-site-web" id="toc-modification-du-répertoire-output-du-site-web" class="nav-link" data-scroll-target="#modification-du-répertoire-output-du-site-web">3. Modification du répertoire ‘output’ du site Web</a></li>
-  <li><a href="#création-du-dépôt-github" id="toc-création-du-dépôt-github" class="nav-link" data-scroll-target="#création-du-dépôt-github">4. Création du dépôt Github</a></li>
-  <li><a href="#déploiement-du-site-web-sur-github" id="toc-déploiement-du-site-web-sur-github" class="nav-link" data-scroll-target="#déploiement-du-site-web-sur-github">5. Déploiement du site web sur Github</a></li>
-  </ul>
-</nav>
+<li><a href="#postgresql-interesting-commands" id="toc-postgresql-interesting-commands" class="nav-link active" data-scroll-target="#postgresql-interesting-commands">1. PostgreSQL interesting commands</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Création d’un site Web Quarto sur Github</h1>
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">SQL</h1>
 </div>
 
 
@@ -142,135 +119,19 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header>
-
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">1. Introduction</h3>
-<p>Ce document est basée sur <a href="https://www.youtube.com/playlist?list=PLkrJrLs7xfbXcEKhTCKRSr2VXH4yiBeXo">cette série de vidéos Youtube en anglais</a> produite par <a href="https://jfrench.github.io/">Joshua French</a></p>
-<p>Les pages Github (<a href="https://pages.github.com/" class="uri">https://pages.github.com/</a>) sont une fonctionnalité offerte par Github qui permet d’héberger votre site Web personnel ainsi que vos projets.</p>
-<p>L’hébergement s’effectue dans votre dépôt (ou repository), ce qui vous permet de :</p>
+</header><section id="postgresql-interesting-commands" class="level3"><h3 class="anchored" data-anchor-id="postgresql-interesting-commands">1. PostgreSQL interesting commands</h3>
 <ul>
-<li>conserver un dépôt git pour votre site Web</li>
-<li>pousser (push) des changements dans votre site Web vers Github</li>
-<li>visualiser presque instantanément les changements de votre site dans Github</li>
+<li><p>REASSIGN OWNED BY <old_role> to <new_role>;</new_role></old_role></p></li>
+<li><p>REVOKE ALL PRIVILEGES ON DATABASE <database> FROM <role>;</role></database></p></li>
 </ul>
-<p>Si votre nom d’utilisateur Github est <code>username</code> et que votre site Web est contenu dans le dépôt <code>demosite</code>alors le rendu de votre site Web sera disponible à l’adresse <code>https://username.github.io/demosite/</code>.</p>
-<p>Si vous créer un site Web personnel, il est préférable de l’héberger à l’adresse <code>https://username.github.io</code>.</p>
-<hr>
-</section>
-<section id="création-dun-site-web-quarto" class="level3">
-<h3 class="anchored" data-anchor-id="création-dun-site-web-quarto">2. Création d’un site Web Quarto</h3>
-<ul>
-<li>Dans R Studio,</li>
-</ul>
-<ol type="1">
-<li><p>Depuis le menu File, click -&gt; New Project</p></li>
-<li><p>Sélectionner New Directory -&gt; Quarto website</p></li>
-<li><p>Choisir un nom de répertoire</p></li>
-</ol>
-<ul>
-<li><p>s’il s’agit du site web personnel hébergé sur Github il faudra choisir comme nom de répertoire <code>username.github.io</code>, <code>username</code> représentant votre nom d’utilisateur Github. Le résultat sera visible à l’adresse <code>https://username.github.io</code></p></li>
-<li><p>s’il s’agit d’un site relatif à un projet hébergé sur Github, il faudra choisir comme nom de répertoire <code>name</code> qui représentera le nom de votre projet. Le résultat sera visible à l’adresse <code>https://username.github.io/name/</code>.</p></li>
-</ul>
-<p>Un exemple est donné ici <a href="#fig-config_projet_quarto">Figure&nbsp;1</a></p>
-<div id="fig-config_projet_quarto" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/01_create-quarto-website.PNG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Configuration du projet de site Web Quarto</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "elu"   "ou594"</code></pre>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Ne pas oublier de cocher l’option <code>Create a git repository</code> pour la gestion des versions de votre site. Git aura été préalablement installé depuis <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
-</div>
-</div>
-<p>6 fichiers vont être automatiquement créés :</p>
-<ul>
-<li><code>_quarto.yaml</code>, qui permet le paramétrage global du site Web</li>
-<li><code>.gitignore</code> identifie les fichiers et répertoire à ignorer par git</li>
-<li><code>index.qmd</code> est le fichier associé à la page défaut du site Web</li>
-<li><code>about.qmd</code> est une page démo associée à la page principale</li>
-<li><code>&lt;nom du projet&gt;.Rproj</code> est le fichier projet R associé au site Web</li>
-<li><code>styles.css</code> est le nom de la feuille de styles par défaut</li>
-</ul>
-<p>Sur le site de <a href="https://quarto.org/">Quarto</a> une section est dédiée au paramétrage des <a href="https://quarto.org/docs/reference/projects/websites.html">Options de site Web</a></p>
-<hr>
-</section>
-<section id="modification-du-répertoire-output-du-site-web" class="level3">
-<h3 class="anchored" data-anchor-id="modification-du-répertoire-output-du-site-web">3. Modification du répertoire ‘output’ du site Web</h3>
-<p>Le répertoire <code>output</code> est le lieu où sont stockés les fichiers de rendu du site. Pour héberger votre site Web Quarto en utilisant la fonctionnalité “<strong>Github pages</strong>” il est préférable de modifier le répertoire <code>output</code> en “docs” (par défaut le répertoire <code>output</code> a pour valeur “_site”.)</p>
-<p>Pour ce faire, il faut :</p>
-<ul>
-<li>sélectionner le fichier <code>_quarto.yml</code></li>
-<li>ajouter la ligne <code>output-dir: docs</code> sous <code>type: website</code></li>
-</ul>
-<div id="fig-output_dir" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/02_output-dir-modification.PNG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: Modification du répertoire output</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="création-du-dépôt-github" class="level3">
-<h3 class="anchored" data-anchor-id="création-du-dépôt-github">4. Création du dépôt Github</h3>
-<ul>
-<li>se loguer dans Github</li>
-<li>Depuis la page principale, créer un dépôt Github.
-<ul>
-<li><p>Pour votre site web personnel, le dépôt devra s’appeler <code>username.github.io</code>. Il faudra bien sûr remplacer <code>username</code>par votre nom d’utilisateur Github et sélectionner l’option <strong>Public</strong> pour que le site soit visible par tous (cf. <a href="#fig-website">Figure&nbsp;3</a>)</p>
-<p>Pour héberger un projet, le dépôt, si vous décider de l’appeler <code>projet</code>, apparaîtra à l’adresse <code>https://username.github.io/projet</code> (cf. <a href="#fig-site_projet">Figure&nbsp;4</a>).</p></li>
-</ul></li>
-</ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-website" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/03_create-personal-website.PNG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: Configuration pour site web personnel</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-site_projet" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/04_create-project-site.PNG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: Configuration pour un site projet</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="déploiement-du-site-web-sur-github" class="level3">
-<h3 class="anchored" data-anchor-id="déploiement-du-site-web-sur-github">5. Déploiement du site web sur Github</h3>
-<ul>
-<li><p>sélectionner l’onglet <code>settings</code> relatif au projet et cliquer sur <code>Pages</code></p></li>
-<li><p>Dans la section <strong>Build and deployment</strong> sélectionner la branche <code>main</code> et le répertoire <code>/docs</code> dans lequel figurent l’ensemble des fichiers constituant le site web (cf <a href="#fig-configuration_pages">Figure&nbsp;5</a>)</p></li>
-</ul>
-<div id="fig-configuration_pages" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/05_repository-settings-pages.PNG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;5: Configuration de déploiement du site</figcaption>
-</figure>
-</div>
-<p>La ligne “Your site live at <code>https://a-lambda.github.io</code>” permet de vérifier que le rendu du site s’est correctement effectué. Un clic sur le bouton <code>Visit site</code> permet d’apprécier le résultat.</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
