@@ -13,7 +13,8 @@ website:
         text: Quarto Website
       - href: sql.qmd
         text: SQL
-
+      - href: animate_plot.qmd
+        text: Animate Plot
 format:
   html:
     theme: 

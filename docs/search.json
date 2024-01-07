@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "The chance",
     "section": "",
-    "text": "Email\n  \n  \n    \n     Github\n  \n\n  \n  \nIs your world choosing the same numbers as mine ?\n\nCoderoll &lt;- \n  sample.int(n = 6, size = 42, replace = TRUE)\n\ntable(roll)\n\nroll\n1 2 3 4 5 6 \n5 5 9 7 8 8 \n\n\nHow many trials before getting an identical world ?\nAnd which are we consider as the reference ?"
+    "text": "Email\n  \n  \n    \n     Github\n  \n\n  \n  \nIs your world choosing the same numbers as mine ?\n\nCoderoll &lt;- \n  sample.int(n = 6, size = 42, replace = TRUE)\n\ntable(roll)\n\nroll\n1 2 3 4 5 6 \n8 7 8 7 3 9 \n\n\nHow many trials before getting an identical world ?\nAnd which are we consider as the reference ?"
   },
   {
     "objectID": "about.html",
@@ -47,5 +47,12 @@
     "title": "SQL",
     "section": "",
     "text": "1. PostgreSQL interesting commands\n\nREASSIGN OWNED BY &lt;old_role&gt; to &lt;new_role&gt;;\nREVOKE ALL PRIVILEGES ON DATABASE &lt;database&gt; FROM &lt;role&gt;;\n\n\n\n[1] \"elu\"   \"ou594\"\n\n\n   elu_genre       elu_nom     elu_prenom elu_lieu_naissance\n1          F       BEUGNET        Ginette              arras\n2          F         BOYER       Patricia               agen\n3          F       BRUNEAU      Catherine              PARIS\n4          F       CARISEY        Valérie      Saint-Vallier\n5          F     DELAURIER  Sylvie Nicole           TONNEINS\n6          F       GARNIER        Corinne    LE PUY EN VELAY\n7          F     LABRUGERE        Martine             CANNES\n8          F      LACRESSE     Christelle              NANCY\n9          F        LAVEST       Isabelle           Aurillac\n10         F      LEPOUTRE     Anne-Marie              reims\n11         F      LIGAUDAN Laure Isabelle      maison-alfort\n12         F       MAILLOT         Karine             drancy\n13         F         PAOLI         Muriel               ALES\n14         F       PFISTER        Monique          INGWILLER\n15         F    QUATREVAUX         Muriel             RENNES\n16         F        SCHULD        Adeline          PARIS 17e\n17         F         TALVA          Nelly           Fougères\n18         M      BARDELLE     Christophe               CAEN\n19         M     BERENGUER          Hervé            béziers\n20         M      BERNADET         Pascal                Dax\n21         M       BERRARD           Eric    LONS LE SAUNIER\n22         M        BOIRET          Alain         Châteaudun\n23         M         BORDE       Philippe       BAR SUR AUBE\n24         M    BUCHHOLZER         Fabien             Bitche\n25         M       CARTIER       Frédéric             LANGON\n26         M     CERQUEIRA      Christian              MACON\n27         M DEVALQUENAIRE           Eric             amiens\n28         M        FUCHET       François         LE CREUSOT\n29         M       GRASSET        Laurent              NIMES\n30         M          GROS          Serge       LA BOISSIERE\n31         M     JEANDARME        Francis   NOGENT SUR SEINE\n32         M       JEANNEY        Patrick               AGEN\n33         M      LE QUÉRÉ        Antoine            PONTIVY\n34         M          LEVY          Hervé           besancon\n35         M        MANUEL        Thierry               &lt;NA&gt;\n36         M        MAYEUX        Laurent       BETHUNE (62)\n37         M         PINEL       Emmanuel LES GRANDES VENTES\n38         M     PRODHOMME         Daniel  NOYAL SUR VILAINE\n39         M        TRAORE            Yan            ABIDJAN\n40         M      VALADIER           Eddy  SAINT GILLES (30)"
+  },
+  {
+    "objectID": "animate_plot.html",
+    "href": "animate_plot.html",
+    "title": "Animate plots",
+    "section": "",
+    "text": "Codeggplot(mpg) +\n  geom_bar(aes(x = factor(cyl))) +\n  labs(title = 'Number of cars in {closest_state} by number of cylinders') +\n  transition_states(states = year) +\n  enter_grow() +\n exit_fade()"
   }
 ]
