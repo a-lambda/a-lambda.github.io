@@ -4,9 +4,9 @@ title: "SQL"
 
 ### 1. PostgreSQL interesting commands
 
-- REASSIGN OWNED BY <old_role> to <new_role>;
+- REASSIGN OWNED BY \<old_role\> to \<new_role\>;
 
-- REVOKE ALL PRIVILEGES ON DATABASE <database> FROM <role>;
+- REVOKE ALL PRIVILEGES ON DATABASE \<database\> FROM \<role\>;
 
 ```{r}
 #| label: load-ggplot
