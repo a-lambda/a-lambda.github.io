@@ -28,7 +28,7 @@ format:
         - dark.css
     code-link: true
     #code-fold: true
-    mainfont: verdana
+    #mainfont: verdana
     fontsize: 1.25rem
     monofont: Fira Code
     css: styles.css
