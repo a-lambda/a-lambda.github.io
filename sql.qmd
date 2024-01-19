@@ -2,7 +2,7 @@
 title: "SQL"
 ---
 
-### 1. Comment supprimer les doublons d'une table
+## 1. Comment supprimer les doublons d'une table
 
 La table prise pour exemple sera la table elu composées des champs suivants :
 
@@ -11,7 +11,7 @@ La table prise pour exemple sera la table elu composées des champs suivants :
 - elu_prenom
 - elu_date_naissance
 - elu_lieu_naissance
-- genre
+- elu_genre
 
 Nous pouvons identifier les doublons comme suit :
 
@@ -104,7 +104,7 @@ WHERE elu_id IN (
 
 
 
-### 1. PostgreSQL interesting commands
+## 2. PostgreSQL interesting commands
 
 - REASSIGN OWNED BY \<old_role\> to \<new_role\>;
 

@@ -140,7 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li><a href="#comment-supprimer-les-doublons-dune-table" id="toc-comment-supprimer-les-doublons-dune-table" class="nav-link active" data-scroll-target="#comment-supprimer-les-doublons-dune-table">1. Comment supprimer les doublons d’une table</a></li>
-  <li><a href="#postgresql-interesting-commands" id="toc-postgresql-interesting-commands" class="nav-link" data-scroll-target="#postgresql-interesting-commands">1. PostgreSQL interesting commands</a></li>
+  <li><a href="#postgresql-interesting-commands" id="toc-postgresql-interesting-commands" class="nav-link" data-scroll-target="#postgresql-interesting-commands">2. PostgreSQL interesting commands</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></nav>
     </div>
@@ -159,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
-</header><section id="comment-supprimer-les-doublons-dune-table" class="level3"><h3 class="anchored" data-anchor-id="comment-supprimer-les-doublons-dune-table">1. Comment supprimer les doublons d’une table</h3>
+</header><section id="comment-supprimer-les-doublons-dune-table" class="level2"><h2 class="anchored" data-anchor-id="comment-supprimer-les-doublons-dune-table">1. Comment supprimer les doublons d’une table</h2>
 <p>La table prise pour exemple sera la table elu composées des champs suivants :</p>
 <ul>
 <li>elu_id (primary key)</li>
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>elu_prenom</li>
 <li>elu_date_naissance</li>
 <li>elu_lieu_naissance</li>
-<li>genre</li>
+<li>elu_genre</li>
 </ul>
 <p>Nous pouvons identifier les doublons comme suit :</p>
 <div class="cell">
@@ -244,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">WHERE</span> <span class="kw">rownum</span> <span class="op">&gt;</span> <span class="dv">1</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="postgresql-interesting-commands" class="level3"><h3 class="anchored" data-anchor-id="postgresql-interesting-commands">1. PostgreSQL interesting commands</h3>
+</section><section id="postgresql-interesting-commands" class="level2"><h2 class="anchored" data-anchor-id="postgresql-interesting-commands">2. PostgreSQL interesting commands</h2>
 <ul>
 <li><p>REASSIGN OWNED BY &lt;old_role&gt; to &lt;new_role&gt;;</p></li>
 <li><p>REVOKE ALL PRIVILEGES ON DATABASE &lt;database&gt; FROM &lt;role&gt;;</p></li>
