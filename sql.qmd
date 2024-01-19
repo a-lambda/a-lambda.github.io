@@ -2,11 +2,116 @@
 title: "SQL"
 ---
 
+### 1. Comment supprimer les doublons d'une table
+
+La table prise pour exemple sera la table elu composées des champs suivants :
+
+- elu_id (primary key)
+- elu_nom
+- elu_prenom
+- elu_date_naissance
+- elu_lieu_naissance
+- genre
+
+Nous pouvons identifier les doublons comme suit :
+
+```{SQL}
+SELECT elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre, COUNT(*) FROM elu 
+GROUP BY elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre 
+HAVING COUNT(*) > 1; 
+```
+3 méthodes possibles pour supprimer les doublons :
+
+1. suppression depuis un INNER JOIN (USING avec postgresql)
+
+```{SQL}
+#| echo: false
+# Cette méthode ne fonctionne pas ici 
+DELETE FROM elu e1
+USING elu e2
+WHERE e1.elu_nom = e2.elu_nom
+  AND e1.elu_prenom = e2.elu_prenom
+  AND e1.elu_date_naissance = e2.elu_date_naissance
+  AND e1.elu_lieu_naissance = e2.elu_lieu_naissance
+  AND e1.elu_genre = e2.elu_genre 
+  AND e1.elu_id < e2.elu_id;
+```
+Cette méthode ne marche pas s'il n'existe pas d'index (comme elu_id ici)
+
+2. La deuxième méthode consiste à 
+
+- recréer une table identique
+
+```{SQL}
+CREATE TABLE IF NOT EXISTS new_elu (
+  elu_id SERIAL PRIMARY KEY,
+  elu_nom VARCHAR(50) NOT NULL,
+  elu_prenom VARCHAR(50) NOT NULL,
+  elu_date_naissance DATE NOT NULL,
+  elu_lieu_naissance VARCHAR(50),
+  elu_genre genre NOT NULL
+  );
+```
+- copier une version unique de chaque enregistrement
+
+a. première méthode
+
+```{SQL}
+INSERT INTO new_elu (elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre)
+SELECT elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre 
+FROM elu 
+GROUP BY elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre;
+```
+b. deuxième méthode avec DISTINCT
+
+```{SQL}
+INSERT INTO new_elu (elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre)
+SELECT DISTINCT elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre
+FROM elu;
+```
+
+- supprimer la table initiale
+
+```{SQL}
+DROP table elu;
+```
+
+- renommer la copie
+
+```{SQL}
+ALTER table new_elu
+RENAME TO elu;
+```
+
+3. la methode consiste à utiliser la fonction ROW_NUMBER()
+
+```{SQL}
+DELETE FROM elu
+WHERE elu_id IN (
+  SELECT elu_id
+  FROM (
+    SELECT elu_id,
+    ROW_NUMBER() OVER(PARTITION BY elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre) AS rownum
+    FROM elu
+  ) AS sub
+  WHERE rownum > 1
+);
+```
+
+
+
+
+
+
+
 ### 1. PostgreSQL interesting commands
 
 - REASSIGN OWNED BY \<old_role\> to \<new_role\>;
 
 - REVOKE ALL PRIVILEGES ON DATABASE \<database\> FROM \<role\>;
+
+##
+
 
 ```{r}
 #| label: load-ggplot
