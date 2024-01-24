@@ -12,7 +12,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Show databases
-      run: psql -h ${{ secrets.DB_HOSTNAME }} -p 5432 -U ${{ secrets.DB_USER }} 
-    
+      run: |
+        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -c "select version();" 
+      env: 
+        DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_PORT: ${{ secrets.DB_PORT }}
+        DB_NAME: ${{ secrets.DB_NAME }}     
 
     
