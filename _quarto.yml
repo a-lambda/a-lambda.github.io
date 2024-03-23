@@ -7,8 +7,8 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: About
+      # - about.qmd
       - href: quarto_website.qmd
         text: Quarto Website
       # - href: sql.qmd
