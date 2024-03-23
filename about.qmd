@@ -8,9 +8,3 @@ I'm interested in spatial statistics
 - [sf package](https://r-spatial.github.io/sf)
 
 and in [**ggplot2** extensions](https://exts.ggplot2.tidyverse.org/)
-
-::: {.callout-note collapse="true"}
-
-Hey that's was just a note joke :)
-
-:::
