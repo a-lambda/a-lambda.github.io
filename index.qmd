@@ -17,30 +17,11 @@ about:
 
 :::{#ppc}
 
-Is your world choosing the same numbers as mine ?
+I'm interested in spatial statistics
 
-```{r}
-#| label: load-ggplot
-#| echo: false
-library(ggplot2)
-library(tibble)
-```
+- [r-spatial-website](https://www.r-spatial.org)
+- [sf package](https://r-spatial.github.io/sf)
 
-```{r}
-#| label: roll-a-dice
-#| fig-width: 8
-#| fig-height: 8
-
-roll <- 
-  sample.int(n = 6, size = 42, replace = TRUE)
-
-table(roll)
-
-```
-
-How many trials before getting an identical world ?
-
-And which are we consider as the reference ?
+and in [**ggplot2** extensions](https://exts.ggplot2.tidyverse.org/)
 
 :::
-
