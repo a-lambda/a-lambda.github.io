@@ -22,6 +22,6 @@ I'm interested in spatial statistics
 - [r-spatial-website](https://www.r-spatial.org)
 - [sf package](https://r-spatial.github.io/sf)
 
-and in [**ggplot2** extensions](https://exts.ggplot2.tidyverse.org/)
+and in [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/)
 
 :::
