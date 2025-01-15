@@ -1,16 +1,23 @@
 project:
   type: website
-  output-dir: docs
+  # output-dir: docs
 
 website:
   title: "A lambda story"
+  open-graph: true
+  page-footer: "Made with Quarto"
   navbar:
+    title: Alcor
     left:
-      - href: index.qmd
-        text: About
+    #   - href: index.qmd
+    #     text: About
       # - about.qmd
       - href: quarto_website.qmd
         text: Quarto Website
+        icon: megaphone
+    tools:
+      - icon: github
+        href: github.com
       # - href: sql.qmd
       #   text: SQL
       # - href: animate_plot.qmd
@@ -19,20 +26,20 @@ website:
 format:
   html:
     link-external-newwindow: true
-    theme: 
-      light: 
-        - minty
-        - css/fira-code.css
-        - light.css
-      dark: 
-        - slate
-        - dark.css
+    theme: [cosmo, styles.scss]
+    lang: "fr"
+    #   light: 
+    #     - minty
+    #     - css/fira-code.css
+    #     - light.css
+    #   dark: 
+    #     - slate
+    #     - dark.css
     code-link: true
     #code-fold: true
-    #mainfont: verdana
-    fontsize: 1.25rem
-    monofont: Fira Code
-    css: styles.css
+    fontsize: 1.1rem
+    monofont: Fira Code # font for chunks
+    # css: styles.scss
     toc: true
     page-layout: full
 

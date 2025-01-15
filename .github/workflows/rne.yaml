@@ -10,10 +10,10 @@ jobs:
   connect-remote:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Show databases
       run: |
-        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -c "select version();" 
+        PGPASSWORD=$DB_PASSWORD psql -h $DB_HOSTNAME -d $DB_NAME -p $DB_PORT -U $DB_USER -c "select count(*) from spatial_ref_sys;" 
       env: 
         DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
         DB_USER: ${{ secrets.DB_USER }}
