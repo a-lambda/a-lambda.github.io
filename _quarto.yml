@@ -1,6 +1,6 @@
 project:
   type: website
-  # output-dir: docs
+  output-dir: docs
 
 website:
   title: "A lambda story"
@@ -15,13 +15,13 @@ website:
       - href: quarto_website.qmd
         text: Quarto Website
         icon: megaphone
+      - href: sql.qmd
+        text: SQL
+      - href: animate_plot.qmd
+        text: Animate Plot
     tools:
       - icon: github
         href: github.com
-      # - href: sql.qmd
-      #   text: SQL
-      # - href: animate_plot.qmd
-      #   text: Animate Plot
         
 format:
   html:
