@@ -11,7 +11,7 @@ about:
       href: mailto:alain.corvisier@proton.me
     - text: Github
       icon: github
-      href: https://a-lambda.github.io
+      href: https://github.com/
   id: ppc
 ---
 
