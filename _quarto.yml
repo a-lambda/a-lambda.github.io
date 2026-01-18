@@ -3,15 +3,26 @@ project:
   output-dir: docs
 
 website:
-  title: "A lambda story"
+  title: "C'est peut-être moi"
+  description: "Mon vestibule"
+  site-url: https://alchiba.fr
+  repo-url: https://github.com/a-lambda/a-lambda.github.io
+  repo-actions: [edit, issue]
+  repo-link-target: _blank
+  repo-link-rel: noopener noreferrer
   open-graph: true
-  page-footer: "Made with Quarto"
+  page-footer: 
+    border: true
+    left: |
+      [Créé avec Quarto](https://quarto.org)
+    center: |
+      2026
   navbar:
     title: Alcor
-    left:
-    #   - href: index.qmd
-    #     text: About
-      # - about.qmd
+    search: true
+    right:
+      - href: index.qmd
+        text: Qui-suis-je?
       - href: quarto_website.qmd
         text: Quarto Website
         icon: megaphone
@@ -25,9 +36,9 @@ website:
         
 format:
   html:
-    link-external-newwindow: true
+    
     theme: [cosmo, styles.scss]
-    lang: "fr"
+    lang: fr-FR
     #   light: 
     #     - minty
     #     - css/fira-code.css
@@ -35,7 +46,10 @@ format:
     #   dark: 
     #     - slate
     #     - dark.css
+    code-copy: true
     code-link: true
+    code-overflow: wrap
+    link-external-newwindow: true
     #code-fold: true
     fontsize: 1.1rem
     monofont: Fira Code # font for chunks

@@ -1,8 +1,14 @@
 ---
-title: "The chance"
-image: images/H1_hasard_maths_Alain.jpg
+title: "Alain Corvisier"
+subtitle: |
+  Quidam on Earth, Lambda with multitude.
+image: images/octocat-1711795343953.png
+format:
+  html:
+    grid:
+      body-width: 800px
 about:
-  template: trestles
+  template: solana
   image-shape: rounded
   image-width: 20em
   links: 
@@ -11,17 +17,12 @@ about:
       href: mailto:alain.corvisier@proton.me
     - text: Github
       icon: github
-      href: https://github.com/
+      href: https://github.com/a-lambda
   id: ppc
 ---
 
 :::{#ppc}
 
-I'm interested in spatial statistics
-
-- [r-spatial-website](https://www.r-spatial.org)
-- [sf package](https://r-spatial.github.io/sf)
-
-and in [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/)
+I'm interested in spatial statistics ... or maybe not ?
 
 :::
