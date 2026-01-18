@@ -1,6 +1,9 @@
 name: rne
 run-name: Setting up the rne database
-on: [push]
+on:
+  workflow_dispatch
+  [push]
+
 jobs:
 
   test-output:
