@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Alain Corvisier – C’est peut-être moi">
 <meta property="og:description" content="Quidam on Earth, Lambda with multitude.">
-<meta property="og:image" content="https://alchiba.fr/images/octocat-1711795343953.png">
+<meta property="og:image" content="https://alchiba.fr/assets/images/octocat-1711795343953.png">
 <meta property="og:site_name" content="C'est peut-être moi">
 <meta property="og:image:height" content="2000">
 <meta property="og:image:width" content="2000">
@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 <p>I’m interested in spatial statistics … or maybe not ?</p>
 </div></div>
     </div>
-    <img src="images/octocat-1711795343953.png" class="about-image
+    <img src="assets/images/octocat-1711795343953.png" class="about-image
   rounded " style="width: 20em;">
   </div>
 </div>
@@ -569,13 +569,24 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://quarto.org">Créé avec Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-<p>2026</p>
+<p>© <span id="current-year"></span> Alain CORVISIER</p>
 <div class="toc-actions"><ul><li><a href="https://github.com/a-lambda/a-lambda.github.io/edit/main/index.qmd" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/a-lambda/a-lambda.github.io/issues/new" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+<script id="quarto-current-year" type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const currentYear = new Date().getFullYear();
+
+    document.getElementById('current-year').textContent = currentYear;
+
+  });
+
+</script>
 
 
 

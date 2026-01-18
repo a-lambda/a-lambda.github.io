@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="Création d’un site Web Quarto sur Github – C’est peut-être moi">
 <meta property="og:description" content="Mon vestibule">
-<meta property="og:image" content="https://alchiba.fr/images/01_create-quarto-website.PNG">
+<meta property="og:image" content="https://alchiba.fr/assets/images/01_create-quarto-website.PNG">
 <meta property="og:site_name" content="C'est peut-être moi">
 </head>
 
@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-config_projet_quarto" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-config_projet_quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/01_create-quarto-website.PNG" class="img-fluid figure-img">
+<img src="assets/images/01_create-quarto-website.PNG" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-config_projet_quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Configuration du projet de site Web Quarto
@@ -232,7 +232,7 @@ Note
 <div id="fig-output_dir" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-output_dir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/02_output-dir-modification.PNG" class="img-fluid figure-img">
+<img src="assets/images/02_output-dir-modification.PNG" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-output_dir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Modification du répertoire output
@@ -257,7 +257,7 @@ Figure&nbsp;2: Modification du répertoire output
 <div id="fig-website" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-website-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/03_create-personal-website.PNG" class="img-fluid figure-img">
+<img src="assets/images/03_create-personal-website.PNG" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-website-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Configuration pour site web personnel
@@ -269,7 +269,7 @@ Figure&nbsp;3: Configuration pour site web personnel
 <div id="fig-site_projet" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-site_projet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/04_create-project-site.PNG" class="img-fluid figure-img">
+<img src="assets/images/04_create-project-site.PNG" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-site_projet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: Configuration pour un site projet
@@ -290,7 +290,7 @@ Figure&nbsp;4: Configuration pour un site projet
 <div id="fig-configuration_pages" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-configuration_pages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/05_repository-settings-pages.PNG" class="img-fluid figure-img">
+<img src="assets/images/05_repository-settings-pages.PNG" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-configuration_pages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5: Configuration de déploiement du site
@@ -715,13 +715,24 @@ Figure&nbsp;5: Configuration de déploiement du site
 <p><a href="https://quarto.org">Créé avec Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-<p>2026</p>
+<p>© <span id="current-year"></span> Alain CORVISIER</p>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/a-lambda/a-lambda.github.io/edit/main/quarto_website.qmd" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/a-lambda/a-lambda.github.io/issues/new" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+<script id="quarto-current-year" type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const currentYear = new Date().getFullYear();
+
+    document.getElementById('current-year').textContent = currentYear;
+
+  });
+
+</script>
 
 
 
