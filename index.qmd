@@ -2,7 +2,7 @@
 title: "Alain Corvisier"
 subtitle: |
   Quidam on Earth, Lambda with multitude.
-image: images/octocat-1711795343953.png
+image: assets/images/octocat-1711795343953.png
 format:
   html:
     grid:

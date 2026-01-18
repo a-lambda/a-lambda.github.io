@@ -38,7 +38,7 @@ Si vous créer un site Web personnel, il est préférable de l'héberger à l'ad
   
 Un exemple est donné ici @fig-config_projet_quarto
 
-![Configuration du projet de site Web Quarto](images/01_create-quarto-website.PNG){#fig-config_projet_quarto}
+![Configuration du projet de site Web Quarto](assets/images/01_create-quarto-website.PNG){#fig-config_projet_quarto}
 
 ::: {.callout-note}
 
@@ -68,7 +68,7 @@ Pour ce faire, il faut :
 - sélectionner le fichier `_quarto.yml`
 - ajouter la ligne `output-dir: docs` sous `type: website`
 
-![Modification du répertoire output](images/02_output-dir-modification.PNG){#fig-output_dir} 
+![Modification du répertoire output](assets/images/02_output-dir-modification.PNG){#fig-output_dir} 
 
 ---
 
@@ -82,9 +82,9 @@ Pour ce faire, il faut :
 
 ::: {layout-ncol=2}
 
-![Configuration pour site web personnel](images/03_create-personal-website.PNG){#fig-website} 
+![Configuration pour site web personnel](assets/images/03_create-personal-website.PNG){#fig-website} 
 
-![Configuration pour un site projet](images/04_create-project-site.PNG){#fig-site_projet}
+![Configuration pour un site projet](assets/images/04_create-project-site.PNG){#fig-site_projet}
 
 :::
 
@@ -96,6 +96,6 @@ Pour ce faire, il faut :
 
 - Dans la section **Build and deployment** sélectionner la branche `main` et le répertoire `/docs` dans lequel figurent l'ensemble des fichiers constituant le site web (cf @fig-configuration_pages)
 
-![Configuration de déploiement du site](images/05_repository-settings-pages.PNG){#fig-configuration_pages} 
+![Configuration de déploiement du site](assets/images/05_repository-settings-pages.PNG){#fig-configuration_pages} 
 
 La ligne "Your site live at `https://a-lambda.github.io`" permet de vérifier que le rendu du site s'est correctement effectué. Un clic sur le bouton `Visit site` permet d'apprécier le résultat.

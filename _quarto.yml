@@ -16,7 +16,7 @@ website:
     left: |
       [Créé avec Quarto](https://quarto.org)
     center: |
-      2026
+      &copy; []{#current-year} Alain CORVISIER
   navbar:
     title: Alcor
     search: true
@@ -56,6 +56,10 @@ format:
     # css: styles.scss
     toc: true
     page-layout: full
+    include-after-body:
+      - file: assets/scripts/current-year.html
+
+
 
 
 
