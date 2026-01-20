@@ -3,15 +3,25 @@ project:
   output-dir: docs
 
 website:
-  title: "C'est peut-être moi"
-  description: "Mon vestibule"
+  title: "Mon vestibule"
+  description: "C'est peut-être moi"
+  announcement:
+    icon: cone-striped
+    dismissable: false
+    content: |
+      "Vous lisez une version non finalisée d'un site actuellement en cours d'élaboration"
+    type: primary
+    position: above-navbar
   site-url: https://alchiba.fr
   repo-url: https://github.com/a-lambda/a-lambda.github.io
   repo-actions: [edit, issue]
   repo-link-target: _blank
   repo-link-rel: noopener noreferrer
   open-graph: true
-  page-footer: 
+  page-footer:
+    background: '#F7D89C'
+    foreground: '#363333'
+
     border: true
     left: |
       [Créé avec Quarto](https://quarto.org)
@@ -20,7 +30,7 @@ website:
   navbar:
     title: Alcor
     search: true
-    right:
+    left:
       - href: index.qmd
         text: Qui-suis-je?
       - href: quarto_website.qmd
@@ -33,10 +43,10 @@ website:
     tools:
       - icon: github
         href: github.com
-        
+       
 format:
   html:
-    
+    axe: true
     theme: [cosmo, styles.scss]
     lang: fr-FR
     #   light: 
@@ -59,7 +69,10 @@ format:
     include-after-body:
       - file: assets/scripts/current-year.html
 
+lightbox: true
 
+execute:
+  freeze: true
 
 
 
