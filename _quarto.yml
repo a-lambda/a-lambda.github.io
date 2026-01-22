@@ -37,8 +37,6 @@ website:
     right:
       - href: blog.qmd
         text: BLOG
-      - href: animate_plot.qmd
-        text: Animate Plot
     tools:
       - icon: github
         href: https://github.com

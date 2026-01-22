@@ -19,6 +19,8 @@ La table prise pour exemple sera la table elu composées des champs suivants :
 Nous pouvons identifier les doublons comme suit :
 
 ```{sql}
+--| label: sql1
+--| eval: false
 SELECT elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre, COUNT(*) FROM elu 
 GROUP BY elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre 
 HAVING COUNT(*) > 1; 
@@ -33,7 +35,8 @@ HAVING COUNT(*) > 1;
 ### suppression depuis un INNER JOIN (USING avec postgresql)
 
 ```{sql}
-
+--| label: sql2
+--| eval: false
 DELETE FROM elu e1
 USING elu e2
 WHERE e1.elu_nom = e2.elu_nom
@@ -56,6 +59,8 @@ Cette méthode ne marche pas s'il n'existe pas d'index (comme elu_id ici)
     - recréer une table identique
 
 ```{sql}
+--| label: sql3
+--| eval: false
 CREATE TABLE IF NOT EXISTS new_elu (
   elu_id SERIAL PRIMARY KEY,
   elu_nom VARCHAR(50) NOT NULL,
@@ -70,6 +75,8 @@ CREATE TABLE IF NOT EXISTS new_elu (
       a. première méthode
 
 ```{sql}
+--| label: sql4
+--| eval: false
 INSERT INTO new_elu (elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre)
 SELECT elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre 
 FROM elu 
@@ -79,6 +86,8 @@ GROUP BY elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre;
       b. deuxième méthode avec DISTINCT
 
 ```{sql}
+--| label: sql5
+--| eval: false
 INSERT INTO new_elu (elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre)
 SELECT DISTINCT elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre
 FROM elu;
@@ -87,12 +96,16 @@ FROM elu;
     - supprimer la table initiale
 
 ```{sql}
+--| label: sql6
+--| eval: false
 DROP table elu;
 ```
 
 - renommer la copie
 
 ```{sql}
+--| label: sql7
+--| eval: false
 ALTER table new_elu
 RENAME TO elu;
 ```
@@ -100,6 +113,8 @@ RENAME TO elu;
 ### la methode consiste à utiliser la fonction ROW_NUMBER()
 
 ```{sql}
+--| label: sql8
+--| eval: false
 DELETE FROM elu
 WHERE elu_id IN (
   SELECT elu_id

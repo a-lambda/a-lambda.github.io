@@ -1,17 +1,22 @@
 ---
-title: "Animate plots"
+title: "Animation de graphiques avec R"
+date: "2024-01-08"
+categories:
+    - R
 ---
+
+Le paquet R [`gganimate`](https://gganimate.com/) permet de mettre *visuellement* en avant des relations particulières entre les données.  
+
+## Chargement des paquets R utiles
 
 ```{r}
 #| label: load-ggplot
-#| echo: false
 library(ggplot2)
 library(gganimate)
 library(gifski)
-# faire une animation avec les données gapminder puis autre chose
 ```
 
-### 1. Exemple d'animation
+## Exemple d'animation
 
 ```{r}
 #| label: geombar-animate

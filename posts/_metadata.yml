@@ -2,7 +2,7 @@
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
+freeze: auto
 
 # Enable banner style title blocks
 title-block-banner: true
@@ -11,6 +11,7 @@ author:
   - name: "Alain CORVISIER"
     url: "https://alchiba.fr"
 
+toccolor: red
 toc: true
 number-sections: true
 back-to-top-navigation: true
