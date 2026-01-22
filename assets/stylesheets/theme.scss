@@ -1,0 +1,198 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+$theme-navbar: #517699;
+$foreground: black;
+$background: $theme-navbar;
+
+// ===========================
+// LINK ANIMATIONS & EFFECTS
+// ===========================
+
+// Main content links with subtle underline animation
+main a:not(.nav-link):not(.btn):not(.about-link):not(.listing-category):not(.quarto-grid-link):not(:has(img)):not(.code-annotation-anchor):not(.toc-action):not(#quarto-back-to-top) {
+  position: relative;
+  text-decoration: underline;
+  text-decoration-color: rgba($foreground, 0.3);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    text-decoration-color: $foreground;
+    text-decoration-thickness: 2px;
+  }
+}
+
+  // ===========================
+// BOOTSTRAP COMPONENTS
+// ===========================
+
+// List Groups
+.list-group-item-action {
+
+  &:hover,
+  &:focus {
+    color: unset;
+    background-color: unset;
+  }
+}
+
+// Navigation Tabs
+.nav-tabs {
+  border-bottom: 1px solid $foreground;
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $foreground;
+    background-color: $background;
+    border-color: $foreground;
+  }
+
+  .nav-link,
+  .nav-pills .nav-link {
+    color: $foreground;
+  }
+}
+
+// Tooltips
+.tooltip {
+  animation: fadeIn 0.2s ease;
+}
+
+// Navbar navigation items with animated underlines
+.navbar-nav {
+
+  .show>.nav-link,
+  .active>.nav-link,
+  .nav-link.active {
+    color: $foreground;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: $foreground;
+  }
+
+  .nav-link {
+    color: body-mix(50%);
+  }
+
+  a.nav-link,
+  a.nav-link:after,
+  a.nav-link:before {
+    transition: all .75s;
+  }
+
+  a.nav-link {
+    position: relative;
+  }
+
+  a.nav-link:hover:after {
+    width: 80%;
+  }
+
+  a.nav-link.active:after,
+  a.nav-link.active:hover:after {
+    border-top: .2em solid $foreground;
+  }
+
+  a.nav-link:hover:after,
+  a.nav-link:after {
+    border-top: .1em solid $foreground;
+  }
+
+  a.nav-link:after {
+    position: absolute;
+    border-top: .1em solid body-mix(90%);
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+  }
+
+  .show>.nav-link,
+  .active>.nav-link,
+  .nav-link.active {
+    font-weight: bolder;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: $foreground;
+  }
+}
+
+// Responsive navbar adjustments
+@media (max-width: 992px) {
+  .navbar-expand-lg {
+
+    a.nav-link.active:after,
+    a.nav-link.active:hover:after,
+    a.nav-link:hover:after,
+    a.nav-link:after {
+      border-top: 0 solid $foreground;
+    }
+  }
+}
+
+.navbar-brand {
+  color: $foreground;
+}
+
+.navbar-logo {
+  max-height: 2em;
+}
+
+// Navbar title with corner brackets animation
+.navbar-title {
+  transition: all .35s ease;
+  display: inline-block;
+  padding: .25em .4em;
+  position: relative;
+  font-weight: bolder;
+
+  &::before,
+  &::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+
+  &::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid $foreground;
+    border-right: 3px solid $foreground;
+    transform: translate(-100%, 50%);
+  }
+
+  &:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid $foreground;
+    border-left: 3px solid $foreground;
+    transform: translate(100%, -50%);
+  }
+
+  &:hover {
+
+    &:before,
+    &:after {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

@@ -25,4 +25,6 @@ about:
 
 I'm interested in spatial statistics ... or maybe not ?
 
+[هَـٰذَا كَلَامٌ عَرَبِيٌّ.]{lang="ar"}
+
 :::

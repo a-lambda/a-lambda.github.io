@@ -1,0 +1,94 @@
+/*-- scss:defaults --*/
+
+// Sass Variables
+// https://quarto.org/docs/output-formats/html-themes.html#sass-variables
+
+@import url('https://fonts.googleapis.com/css2?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+3');
+@import url('https://fonts.googleapis.com/css2?family=Dosis');
+
+
+$theme-cyan: #248CFC;
+$secondary: #F3DFA2;
+$darkred: #501010;
+$theme-ligthblue: #f8f8ff;
+$theme-blue: #223068;
+$theme-black: black;
+$theme-navbar: #517699;
+$foreground-light: #ffff90;
+
+/* Colors */
+$body-bg: $theme-ligthblue;
+$body-color: $theme-blue;
+$link-color: $theme-cyan;
+$navbar-bg: $theme-navbar;
+// Background color of inline code
+$code-bg: $secondary;
+// Background color of chunk code
+$code-block-bg: $secondary;
+
+/* Fonts */
+//$font-family-sans-serif: "Exo", sans-serif;
+//$font-family-sans-serif: "Source Sans Pro", Roboto, Arial, sans-serif;
+$font-size-root: 17px;
+
+/*-- scss:rules --*/
+
+body {
+
+  font-family: "Dosis";
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+nav {
+  overflow:hidden;
+  background-color: white;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
+  border-bottom:solid;
+}
+
+.nav-item {
+  overflow:hidden;
+  border-color: #223068;
+  border-width: 1px;
+  border-radius: 30px;    
+}
+
+.navbar-title {
+  font-family: "Dosis", serif;
+  font-size:xx-large;
+  font-weight: bold;
+  //text-shadow: 4px 4px 4px #aaa;
+  color: $foreground-light;
+  transition-duration: 0.5s;
+  &:hover {
+    color: darken(gray, 60%);
+    transition-duration: 0.5s;
+  }
+}
+
+.menu-text {
+  font-family: "Dosis", serif;
+  font-size:x-large;
+  color: $foreground-light;
+  transition-duration: 0.5s;
+  &:hover {
+    color: darken(gray, 60%);
+    transition-duration: 0.5s;
+  }
+}
+
+a:hover {
+  color: $darkred;
+}
+
+#quarto-header {
+  background-color: red;
+}
+

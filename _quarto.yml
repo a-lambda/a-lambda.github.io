@@ -5,13 +5,13 @@ project:
 website:
   title: "Mon vestibule"
   description: "C'est peut-être moi"
-  announcement:
-    icon: cone-striped
-    dismissable: false
-    content: |
-      "Vous lisez une version non finalisée d'un site actuellement en cours d'élaboration"
-    type: primary
-    position: above-navbar
+  #announcement:
+  #  icon: cone-striped
+  #  dismissable: false
+  #  content: |
+  #    "Vous lisez une version non finalisée d'un site actuellement en cours d'élaboration"
+  #  type: primary
+  #  position: above-navbar
   site-url: https://alchiba.fr
   repo-url: https://github.com/a-lambda/a-lambda.github.io
   repo-actions: [edit, issue]
@@ -33,6 +33,9 @@ website:
     left:
       - href: index.qmd
         text: Qui-suis-je?
+    right:
+      - href: blog.qmd
+        text: BLOG
       - href: quarto_website.qmd
         text: Quarto Website
         icon: megaphone
@@ -47,15 +50,16 @@ website:
 format:
   html:
     axe: true
-    theme: [cosmo, styles.scss]
+    theme: 
+      light:
+        - cosmo
+        - brand
+        - assets/stylesheets/styles.scss
+      dark:
+        - cosmo
+        - brand
+        - assets/stylesheets/styles.scss
     lang: fr-FR
-    #   light: 
-    #     - minty
-    #     - css/fira-code.css
-    #     - light.css
-    #   dark: 
-    #     - slate
-    #     - dark.css
     code-copy: true
     code-link: true
     code-overflow: wrap

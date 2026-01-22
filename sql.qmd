@@ -138,8 +138,7 @@ conn <- RPostgres::dbConnect(
 
 RPostgres::dbSendQuery(
   conn,
-  "ALTER DATABASE alcor SET SEARCH_PATH TO rne
-  ;"
+  "ALTER DATABASE alcor SET SEARCH_PATH TO rne;"
 )
 
 RPostgres::dbListTables(conn)
