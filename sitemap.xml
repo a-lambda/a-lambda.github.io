@@ -1,67 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://alchiba.fr/sql.html</loc>
-    <lastmod>2026-01-22T16:49:16.798Z</lastmod>
-  </url>
-  <url>
     <loc>https://alchiba.fr/posts/20241201_now_is_never/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.780Z</lastmod>
+    <lastmod>2026-01-22T18:45:33.042Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/posts/20240901_colors/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.765Z</lastmod>
+    <lastmod>2026-01-22T18:45:33.028Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/posts/20240701_reflet/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.755Z</lastmod>
+    <lastmod>2026-01-22T18:45:33.020Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/posts/20240527_closed/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.745Z</lastmod>
+    <lastmod>2026-01-22T18:45:33.010Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/posts/20240501_nouvelle/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.737Z</lastmod>
+    <lastmod>2026-01-22T18:45:33.002Z</lastmod>
   </url>
   <url>
-    <loc>https://alchiba.fr/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.727Z</lastmod>
+    <loc>https://alchiba.fr/posts/20240108_gganimate/index.html</loc>
+    <lastmod>2026-01-22T18:45:32.992Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alchiba.fr/posts/20240106_quarto_website/index.html</loc>
+    <lastmod>2026-01-22T18:45:32.990Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/blog.html</loc>
-    <lastmod>2026-01-22T16:49:16.715Z</lastmod>
+    <lastmod>2026-01-22T18:45:32.977Z</lastmod>
   </url>
   <url>
-    <loc>https://alchiba.fr/animate_plot.html</loc>
-    <lastmod>2026-01-22T16:49:16.707Z</lastmod>
+    <loc>https://alchiba.fr/index.html</loc>
+    <lastmod>2026-01-22T18:45:32.988Z</lastmod>
   </url>
   <url>
-    <loc>https://alchiba.fr/howto.html</loc>
-    <lastmod>2026-01-22T16:49:16.727Z</lastmod>
+    <loc>https://alchiba.fr/posts/20240107_doublons_sql/index.html</loc>
+    <lastmod>2026-01-22T18:45:32.990Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/posts/20240430_welcome/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.731Z</lastmod>
+    <lastmod>2026-01-22T18:45:32.996Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/posts/20240502_langage/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.745Z</lastmod>
+    <lastmod>2026-01-22T18:45:33.010Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/posts/20240531_couplufin/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.753Z</lastmod>
+    <lastmod>2026-01-22T18:45:33.017Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/posts/20240801_gravity/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.759Z</lastmod>
+    <lastmod>2026-01-22T18:45:33.024Z</lastmod>
   </url>
   <url>
     <loc>https://alchiba.fr/posts/20241101_world_word/index.html</loc>
-    <lastmod>2026-01-22T16:49:16.769Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alchiba.fr/quarto_website.html</loc>
-    <lastmod>2026-01-22T16:49:16.798Z</lastmod>
+    <lastmod>2026-01-22T18:45:33.032Z</lastmod>
   </url>
 </urlset>

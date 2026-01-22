@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Alain CORVISIER">
 
-<title>Création d’un site Web Quarto sur Github – Mon vestibule</title>
+<title>Animation de graphiques avec R – Mon vestibule</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,34 +21,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6398fc8b3c7e598a6e07e102aa2a84ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-864ea91e9eda9c027b9bca6107a951ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-6398fc8b3c7e598a6e07e102aa2a84ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-127927fc9c1e4794281fc8df01dbe5c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-59e3a917bc3302bda73b41eddd6b346f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-127927fc9c1e4794281fc8df01dbe5c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,9 +114,9 @@ ul.task-list li input[type="checkbox"] {
 <script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 
 
-<meta property="og:title" content="Création d’un site Web Quarto sur Github – Mon vestibule">
+<meta property="og:title" content="Animation de graphiques avec R – Mon vestibule">
 <meta property="og:description" content="C’est peut-être moi">
-<meta property="og:image" content="https://alchiba.fr/assets/images/01_create-quarto-website.PNG">
+<meta property="og:image" content="https://alchiba.fr/posts/20240108_gganimate/index_files/figure-html/geombar-animate-1.gif">
 <meta property="og:site_name" content="Mon vestibule">
 </head>
 
@@ -249,11 +285,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Alcor</span>
     </a>
   </div>
@@ -264,39 +300,58 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-megaphone" role="img">
+</i> 
 <span class="menu-text">Qui-suis-je?</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">BLOG</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./quarto_website.html" aria-current="page"> <i class="bi bi-megaphone" role="img">
-</i> 
-<span class="menu-text">Quarto Website</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./sql.html"> 
-<span class="menu-text">SQL</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./animate_plot.html"> 
-<span class="menu-text">Animate Plot</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-    <a href="./github.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://github.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Animation de graphiques avec R</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      <div>
+      <div class="quarto-title-meta-heading">Auteur·rice</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://alchiba.fr">Alain CORVISIER</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Date de publication</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">8 janvier 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -304,178 +359,45 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
-  <li><a href="#création-dun-site-web-quarto" id="toc-création-dun-site-web-quarto" class="nav-link" data-scroll-target="#création-dun-site-web-quarto">2. Création d’un site Web Quarto</a></li>
-  <li><a href="#modification-du-répertoire-output-du-site-web" id="toc-modification-du-répertoire-output-du-site-web" class="nav-link" data-scroll-target="#modification-du-répertoire-output-du-site-web">3. Modification du répertoire ‘output’ du site Web</a></li>
-  <li><a href="#création-du-dépôt-github" id="toc-création-du-dépôt-github" class="nav-link" data-scroll-target="#création-du-dépôt-github">4. Création du dépôt Github</a></li>
-  <li><a href="#déploiement-du-site-web-sur-github" id="toc-déploiement-du-site-web-sur-github" class="nav-link" data-scroll-target="#déploiement-du-site-web-sur-github">5. Déploiement du site web sur Github</a></li>
+  <li><a href="#chargement-des-paquets-r-utiles" id="toc-chargement-des-paquets-r-utiles" class="nav-link active" data-scroll-target="#chargement-des-paquets-r-utiles"><span class="header-section-number">1</span> Chargement des paquets R utiles</a></li>
+  <li><a href="#exemple-danimation" id="toc-exemple-danimation" class="nav-link" data-scroll-target="#exemple-danimation"><span class="header-section-number">2</span> Exemple d’animation</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/a-lambda/a-lambda.github.io/edit/main/quarto_website.qmd" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/a-lambda/a-lambda.github.io/issues/new" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/a-lambda/a-lambda.github.io/edit/main/posts/20240108_gganimate/index.qmd" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/a-lambda/a-lambda.github.io/issues/new" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Création d’un site Web Quarto sur Github</h1>
+
+
+
+
+<p>Le paquet R <a href="https://gganimate.com/"><code>gganimate</code></a> permet de mettre <em>visuellement</em> en avant des relations particulières entre les données.</p>
+<section id="chargement-des-paquets-r-utiles" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="chargement-des-paquets-r-utiles"><span class="header-section-number">1</span> Chargement des paquets R utiles</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gganimate)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gifski)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">1. Introduction</h3>
-<p>Ce document est basée sur <a href="https://www.youtube.com/playlist?list=PLkrJrLs7xfbXcEKhTCKRSr2VXH4yiBeXo">cette série de vidéos Youtube en anglais</a> produite par <a href="https://jfrench.github.io/">Joshua French</a></p>
-<p>Les pages Github (<a href="https://pages.github.com/" class="uri">https://pages.github.com/</a>) sont une fonctionnalité offerte par Github qui permet d’héberger votre site Web personnel ainsi que vos projets.</p>
-<p>L’hébergement s’effectue dans votre dépôt (ou repository), ce qui vous permet de :</p>
-<ul>
-<li>conserver un dépôt git pour votre site Web</li>
-<li>pousser (push) des changements dans votre site Web vers Github</li>
-<li>visualiser presque instantanément les changements de votre site dans Github</li>
-</ul>
-<p>Si votre nom d’utilisateur Github est <code>username</code> et que votre site Web est contenu dans le dépôt <code>demosite</code>alors le rendu de votre site Web sera disponible à l’adresse <code>https://username.github.io/demosite/</code>.</p>
-<p>Si vous créer un site Web personnel, il est préférable de l’héberger à l’adresse <code>https://username.github.io</code>.</p>
-<hr>
 </section>
-<section id="création-dun-site-web-quarto" class="level3">
-<h3 class="anchored" data-anchor-id="création-dun-site-web-quarto">2. Création d’un site Web Quarto</h3>
-<ul>
-<li>Dans R Studio,</li>
-</ul>
-<ol type="1">
-<li><p>Depuis le menu File, click -&gt; New Project</p></li>
-<li><p>Sélectionner New Directory -&gt; Quarto website</p></li>
-<li><p>Choisir un nom de répertoire</p></li>
-</ol>
-<ul>
-<li><p>s’il s’agit du site web personnel hébergé sur Github il faudra choisir comme nom de répertoire <code>username.github.io</code>, <code>username</code> représentant votre nom d’utilisateur Github. Le résultat sera visible à l’adresse <code>https://username.github.io</code></p></li>
-<li><p>s’il s’agit d’un site relatif à un projet hébergé sur Github, il faudra choisir comme nom de répertoire <code>name</code> qui représentera le nom de votre projet. Le résultat sera visible à l’adresse <code>https://username.github.io/name/</code>.</p></li>
-</ul>
-<p>Un exemple est donné ici <a href="#fig-config_projet_quarto" class="quarto-xref">Figure&nbsp;1</a></p>
-<div id="fig-config_projet_quarto" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-config_projet_quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="assets/images/01_create-quarto-website.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Configuration du projet de site Web Quarto"><img src="assets/images/01_create-quarto-website.PNG" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-config_projet_quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Configuration du projet de site Web Quarto
-</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Ne pas oublier de cocher l’option <code>Create a git repository</code> pour la gestion des versions de votre site. Git aura été préalablement installé depuis <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
-</div>
-</div>
-<p>6 fichiers vont être automatiquement créés :</p>
-<ul>
-<li><code>_quarto.yaml</code>, qui permet le paramétrage global du site Web</li>
-<li><code>.gitignore</code> identifie les fichiers et répertoire à ignorer par git</li>
-<li><code>index.qmd</code> est le fichier associé à la page défaut du site Web</li>
-<li><code>about.qmd</code> est une page démo associée à la page principale</li>
-<li><code>&lt;nom du projet&gt;.Rproj</code> est le fichier projet R associé au site Web</li>
-<li><code>styles.css</code> est le nom de la feuille de styles par défaut</li>
-</ul>
-<p>Sur le site de <a href="https://quarto.org/">Quarto</a> une section est dédiée au paramétrage des <a href="https://quarto.org/docs/reference/projects/websites.html">Options de site Web</a></p>
-<hr>
-</section>
-<section id="modification-du-répertoire-output-du-site-web" class="level3">
-<h3 class="anchored" data-anchor-id="modification-du-répertoire-output-du-site-web">3. Modification du répertoire ‘output’ du site Web</h3>
-<p>Le répertoire <code>output</code> est le lieu où sont stockés les fichiers de rendu du site. Pour héberger votre site Web Quarto en utilisant la fonctionnalité “<strong>Github pages</strong>” il est préférable de modifier le répertoire <code>output</code> en “docs” (par défaut le répertoire <code>output</code> a pour valeur “_site”.)</p>
-<p>Pour ce faire, il faut :</p>
-<ul>
-<li>sélectionner le fichier <code>_quarto.yml</code></li>
-<li>ajouter la ligne <code>output-dir: docs</code> sous <code>type: website</code></li>
-</ul>
-<div id="fig-output_dir" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-output_dir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="assets/images/02_output-dir-modification.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Modification du répertoire output"><img src="assets/images/02_output-dir-modification.PNG" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-output_dir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Modification du répertoire output
-</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="création-du-dépôt-github" class="level3">
-<h3 class="anchored" data-anchor-id="création-du-dépôt-github">4. Création du dépôt Github</h3>
-<ul>
-<li>se loguer dans Github</li>
-<li>Depuis la page principale, créer un dépôt Github.
-<ul>
-<li><p>Pour votre site web personnel, le dépôt devra s’appeler <code>username.github.io</code>. Il faudra bien sûr remplacer <code>username</code>par votre nom d’utilisateur Github et sélectionner l’option <strong>Public</strong> pour que le site soit visible par tous (cf. <a href="#fig-website" class="quarto-xref">Figure&nbsp;3</a>)</p>
-<p>Pour héberger un projet, le dépôt, si vous décider de l’appeler <code>projet</code>, apparaîtra à l’adresse <code>https://username.github.io/projet</code> (cf. <a href="#fig-site_projet" class="quarto-xref">Figure&nbsp;4</a>).</p></li>
-</ul></li>
-</ul>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-website" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-website-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="assets/images/03_create-personal-website.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Configuration pour site web personnel"><img src="assets/images/03_create-personal-website.PNG" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-website-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Configuration pour site web personnel
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-site_projet" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-site_projet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="assets/images/04_create-project-site.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Configuration pour un site projet"><img src="assets/images/04_create-project-site.PNG" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-site_projet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Configuration pour un site projet
-</figcaption>
+<section id="exemple-danimation" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="exemple-danimation"><span class="header-section-number">2</span> Exemple d’animation</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(cyl))) <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">'Number of cars in {closest_state} by number of cylinders'</span>) <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_states</span>(<span class="at">states =</span> year) <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">enter_grow</span>() <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> <span class="fu">exit_fade</span>()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="index_files/figure-html/geombar-animate-1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/geombar-animate-1.gif" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</div>
-<hr>
-</section>
-<section id="déploiement-du-site-web-sur-github" class="level3">
-<h3 class="anchored" data-anchor-id="déploiement-du-site-web-sur-github">5. Déploiement du site web sur Github</h3>
-<ul>
-<li><p>sélectionner l’onglet <code>settings</code> relatif au projet et cliquer sur <code>Pages</code></p></li>
-<li><p>Dans la section <strong>Build and deployment</strong> sélectionner la branche <code>main</code> et le répertoire <code>/docs</code> dans lequel figurent l’ensemble des fichiers constituant le site web (cf <a href="#fig-configuration_pages" class="quarto-xref">Figure&nbsp;5</a>)</p></li>
-</ul>
-<div id="fig-configuration_pages" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-configuration_pages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="assets/images/05_repository-settings-pages.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Configuration de déploiement du site"><img src="assets/images/05_repository-settings-pages.PNG" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-configuration_pages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Configuration de déploiement du site
-</figcaption>
-</figure>
-</div>
-<p>La ligne “Your site live at <code>https://a-lambda.github.io</code>” permet de vérifier que le rendu du site s’est correctement effectué. Un clic sur le bouton <code>Visit site</code> permet d’apprécier le résultat.</p>
 
 
 </section>
@@ -907,7 +829,7 @@ Figure&nbsp;5: Configuration de déploiement du site
 </div>   
     <div class="nav-footer-center">
 <p>© <span id="current-year"></span> Alain CORVISIER</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/a-lambda/a-lambda.github.io/edit/main/quarto_website.qmd" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/a-lambda/a-lambda.github.io/issues/new" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/a-lambda/a-lambda.github.io/edit/main/posts/20240108_gganimate/index.qmd" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/a-lambda/a-lambda.github.io/issues/new" target="_blank" rel="noopener noreferrer" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
