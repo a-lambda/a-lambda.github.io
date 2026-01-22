@@ -37,8 +37,6 @@ website:
     right:
       - href: blog.qmd
         text: BLOG
-      - href: sql.qmd
-        text: SQL
       - href: animate_plot.qmd
         text: Animate Plot
     tools:
