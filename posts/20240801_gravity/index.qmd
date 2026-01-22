@@ -1,7 +1,8 @@
 ---
 title: "Lorsque tomber fait sens ..."
 date: "2024-08-01"
-categories: [news]
+categories:
+    - Soliloques
 image: "albator.png"
 ---
 

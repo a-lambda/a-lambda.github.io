@@ -1,7 +1,8 @@
 ---
 title: "Que nous dit notre reflet ?"
 date: "2024-07-01"
-categories: [news]
+categories:
+    - Soliloques
 image: "Magie_blanche.png"
 ---
 

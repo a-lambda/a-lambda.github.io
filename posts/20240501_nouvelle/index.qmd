@@ -1,7 +1,8 @@
 ---
 title: "Nouvelle en devenir"
 date: "2024-05-01"
-categories: [news]
+categories:
+    - Soliloques
 image: "cocon_bailleul.png"
 footnotes-hover: true
 ---

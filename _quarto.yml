@@ -33,19 +33,17 @@ website:
     left:
       - href: index.qmd
         text: Qui-suis-je?
+        icon: megaphone
     right:
       - href: blog.qmd
         text: BLOG
-      - href: quarto_website.qmd
-        text: Quarto Website
-        icon: megaphone
       - href: sql.qmd
         text: SQL
       - href: animate_plot.qmd
         text: Animate Plot
     tools:
       - icon: github
-        href: github.com
+        href: https://github.com
        
 format:
   html:

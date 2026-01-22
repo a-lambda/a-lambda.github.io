@@ -1,7 +1,8 @@
 ---
 title: "Alors ? Ouvert ou Fermé ?"
 date: "2024-05-27"
-categories: [news]
+categories:
+    - Soliloques
 image: "porte.png"
 ---
 

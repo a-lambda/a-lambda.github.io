@@ -1,7 +1,8 @@
 ---
 title: "La forge du monde"
 date: "2024-11-01"
-categories: [news]
+categories:
+    - Soliloques
 image: "forge.png"
 ---
 

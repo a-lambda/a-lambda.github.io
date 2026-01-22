@@ -1,7 +1,8 @@
 ---
 title: "Maintenant n'existe pas"
 date: "2024-12-01"
-categories: [news]
+categories:
+    - Soliloques
 image: "aurores.png"
 ---
 

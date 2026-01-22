@@ -2,7 +2,8 @@
 title: "Qu'est-ce à dire \"un chat\" ?"
 author: "a lambda"
 date: "2024-05-02"
-categories: [news]
+categories:
+    - Soliloques
 image: "Dragibus.png"
 ---
 De l'imposture de la communication. 

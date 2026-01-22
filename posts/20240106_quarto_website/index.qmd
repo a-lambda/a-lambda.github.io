@@ -1,8 +1,12 @@
 ---
 title: "Création d'un site Web Quarto sur Github"
+date: "2024-01-06"
+categories:
+    - Quarto
+    - Github
 ---
 
-### 1. Introduction
+## Introduction
 
 Ce document est basée sur [cette série de vidéos Youtube en anglais](https://www.youtube.com/playlist?list=PLkrJrLs7xfbXcEKhTCKRSr2VXH4yiBeXo) produite par [Joshua French](https://jfrench.github.io/)
 
@@ -20,7 +24,7 @@ Si vous créer un site Web personnel, il est préférable de l'héberger à l'ad
 
 ------------------------------------------------------------------------
 
-### 2. Création d'un site Web Quarto
+## Création d'un site Web Quarto
 
 - Dans R Studio,
 
@@ -38,7 +42,7 @@ Si vous créer un site Web personnel, il est préférable de l'héberger à l'ad
   
 Un exemple est donné ici @fig-config_projet_quarto
 
-![Configuration du projet de site Web Quarto](assets/images/01_create-quarto-website.PNG){#fig-config_projet_quarto}
+![Configuration du projet de site Web Quarto](01_create-quarto-website.PNG){#fig-config_projet_quarto}
 
 ::: {.callout-note}
 
@@ -59,7 +63,7 @@ Sur le site de [Quarto](https://quarto.org/) une section est dédiée au paramé
 
 ---
 
-### 3. Modification du répertoire 'output' du site Web 
+## Modification du répertoire 'output' du site Web 
 
 Le répertoire `output` est le lieu où sont stockés les fichiers de rendu du site. Pour héberger votre site Web Quarto en utilisant la fonctionnalité "**Github pages**" il est préférable de modifier le répertoire `output` en "docs" (par défaut le répertoire `output` a pour valeur "_site".)
 
@@ -68,11 +72,11 @@ Pour ce faire, il faut :
 - sélectionner le fichier `_quarto.yml`
 - ajouter la ligne `output-dir: docs` sous `type: website`
 
-![Modification du répertoire output](assets/images/02_output-dir-modification.PNG){#fig-output_dir} 
+![Modification du répertoire output](02_output-dir-modification.PNG){#fig-output_dir} 
 
 ---
 
-### 4. Création du dépôt Github
+## Création du dépôt Github
 
 - se loguer dans Github
 - Depuis la page principale, créer un dépôt Github.
@@ -82,20 +86,20 @@ Pour ce faire, il faut :
 
 ::: {layout-ncol=2}
 
-![Configuration pour site web personnel](assets/images/03_create-personal-website.PNG){#fig-website} 
+![Configuration pour site web personnel](03_create-personal-website.PNG){#fig-website} 
 
-![Configuration pour un site projet](assets/images/04_create-project-site.PNG){#fig-site_projet}
+![Configuration pour un site projet](04_create-project-site.PNG){#fig-site_projet}
 
 :::
 
 ---
 
-### 5. Déploiement du site web sur Github
+## Déploiement du site web sur Github
 
 - sélectionner l'onglet `settings` relatif au projet et cliquer sur `Pages`
 
 - Dans la section **Build and deployment** sélectionner la branche `main` et le répertoire `/docs` dans lequel figurent l'ensemble des fichiers constituant le site web (cf @fig-configuration_pages)
 
-![Configuration de déploiement du site](assets/images/05_repository-settings-pages.PNG){#fig-configuration_pages} 
+![Configuration de déploiement du site](05_repository-settings-pages.PNG){#fig-configuration_pages} 
 
 La ligne "Your site live at `https://a-lambda.github.io`" permet de vérifier que le rendu du site s'est correctement effectué. Un clic sur le bouton `Visit site` permet d'apprécier le résultat.
