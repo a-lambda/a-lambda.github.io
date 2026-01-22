@@ -17,6 +17,7 @@ $theme-blue: #223068;
 $theme-black: black;
 $theme-navbar: #517699;
 $foreground-light: #ffff90;
+$foreground: $foreground-light;
 
 /* Colors */
 $body-bg: $theme-ligthblue;
@@ -92,3 +93,32 @@ a:hover {
   background-color: red;
 }
 
+// Footer navigation
+.nav-footer {
+  border-top: 1px solid body-mix(50%);
+
+  a:hover {
+    color: $darkred;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #ff8080;
+  }
+}
+
+.nav-footer-center {
+  min-height: unset;
+
+  p,
+  ol,
+  ul,
+  dl {
+    margin-bottom: 0;
+  }
+
+  .toc-actions {
+
+    ol,
+    ul {
+      padding-left: 0;
+    }
+  }
+}
