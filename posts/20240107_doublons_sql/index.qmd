@@ -23,7 +23,7 @@ Nous pouvons identifier les doublons comme suit :
 --| eval: false
 SELECT elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre, COUNT(*) FROM elu 
 GROUP BY elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre 
-HAVING COUNT(*) > 1; 
+HAVING COUNT(*) > 1;
 ```
 
 ::: {.callout-note collapse="false"}
@@ -45,7 +45,6 @@ WHERE e1.elu_nom = e2.elu_nom
   AND e1.elu_lieu_naissance = e2.elu_lieu_naissance
   AND e1.elu_genre = e2.elu_genre 
   AND e1.elu_id < e2.elu_id;
-
 ```
 
 ::: {.callout-important collapse="false"}
@@ -70,6 +69,7 @@ CREATE TABLE IF NOT EXISTS new_elu (
   elu_genre genre NOT NULL
   );
 ```
+
     - copier une version unique de chaque enregistrement
 
       a. première méthode
@@ -82,7 +82,7 @@ SELECT elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre
 FROM elu 
 GROUP BY elu_nom, elu_prenom, elu_date_naissance, elu_lieu_naissance, elu_genre;
 ```
-      
+
       b. deuxième méthode avec DISTINCT
 
 ```{sql}
